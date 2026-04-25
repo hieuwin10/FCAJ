@@ -1,0 +1,137 @@
+﻿# ==============================================================================
+# NHAT KY TERMINAL CHI TIET - LAB 20: AWS TRANSIT GATEWAY
+# ==============================================================================
+
+[BUOC 1: TAO KEY PAIR]
+$ aws ec2 create-key-pair --key-name tgw-key --query 'KeyMaterial' --output text | Out-File -Encoding ascii -FilePath "lab/20/tgw-key.pem"
+(Log: Tao thanh cong file tgw-key.pem)
+
+[BUOC 2: KHOI TAO CLOUDFORMATION STACK]
+$ aws cloudformation create-stack --stack-name Lab20-Stack --template-body file://lab/20/tgw-lab.yaml --parameters ParameterKey=SSHKeyName,ParameterValue=tgw-key --capabilities CAPABILITY_IAM
+{
+    "StackId": "arn:aws:cloudformation:ap-southeast-1:120259362620:stack/Lab20-Stack/b601c120-4047-11f1-b1d9-063736d2ee3f"
+}
+$ aws cloudformation wait stack-create-complete --stack-name Lab20-Stack
+(Trang thai: CREATE_COMPLETE)
+
+[BUOC 2.3: COPY KHOA LEN JUMP HOST]
+$ scp -i tgw-key.pem -o StrictHostKeyChecking=no tgw-key.pem ec2-user@54.255.166.130:/home/ec2-user/
+tgw-key.pem                                   100% 1674     1.2MB/s   00:00
+$ scp -i tgw-key.pem -o StrictHostKeyChecking=no tgw-key.pem ec2-user@13.229.236.182:/home/ec2-user/
+tgw-key.pem                                   100% 1674     1.5MB/s   00:00
+
+[BUOC 3: TAO TRANSIT GATEWAY]
+$ aws ec2 create-transit-gateway --description "Transit Gateway for lab20" --options DefaultRouteTableAssociation=disable,DefaultRouteTablePropagation=disable --tag-specifications "ResourceType=transit-gateway,Tags=[{Key=Name,Value=lab20-tgw}]"
+{
+    "TransitGateway": {
+        "TransitGatewayId": "tgw-058ef8d76a862176e",
+        "State": "pending"
+    }
+}
+
+[BUOC 4: TAO TRANSIT GATEWAY ATTACHMENTS]
+$ aws ec2 create-transit-gateway-vpc-attachment --vpc-id vpc-051a3ec06c1e7e888 ... (VPC1)
+$ aws ec2 create-transit-gateway-vpc-attachment --vpc-id vpc-0a9f3a4347d4a6e2a ... (VPC2)
+$ aws ec2 create-transit-gateway-vpc-attachment --vpc-id vpc-0b8a3f99338d710be ... (VPC3)
+$ aws ec2 create-transit-gateway-vpc-attachment --vpc-id vpc-02c8d8295d722676d ... (VPC4)
+(Phan hoi: State: pending cho ca 4 attachments)
+
+[BUOC 4: KIEM TRA KET NOI (TEST FAIL - NGUYEN VAN TERMINAL)]
+--- KIEM TRA KET NOI TU VPC1 SANG CAC VPC KHAC ---
+Ping VPC2 (172.16.2.9) tu VPC1:
+PING 172.16.2.9 (172.16.2.9) 56(84) bytes of data.
+--- 172.16.2.9 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2037ms
+
+Ping VPC3 (172.16.3.9) tu VPC1:
+PING 172.16.3.9 (172.16.3.9) 56(84) bytes of data.
+--- 172.16.3.9 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2052ms
+
+Ping VPC4 (172.16.4.13) tu VPC1:
+PING 172.16.4.13 (172.16.4.13) 56(84) bytes of data.
+--- 172.16.4.13 ping statistics ---
+3 packets transmitted, 0 received, 100% packet loss, time 2050ms
+
+[BUOC 5: TAO TGW ROUTE TABLE]
+$ aws ec2 create-transit-gateway-route-table --transit-gateway-id tgw-058ef8d76a862176e
+{
+    "TransitGatewayRouteTable": {
+        "TransitGatewayRouteTableId": "tgw-rtb-0709ceabfe0f42742",
+        "State": "pending"
+    }
+}
+
+[BUOC 5: ASSOCIATIONS & PROPAGATIONS - CHI TIET]
+$ aws ec2 associate-transit-gateway-route-table --transit-gateway-route-table-id tgw-rtb-0709ceabfe0f42742 --transit-gateway-attachment-id tgw-attach-0fe13b6f145a1c81e
+{
+    "Association": { "TransitGatewayAttachmentId": "tgw-attach-0fe13b6f145a1c81e", "State": "associating" }
+}
+$ aws ec2 enable-transit-gateway-route-table-propagation --transit-gateway-route-table-id tgw-rtb-0709ceabfe0f42742 --transit-gateway-attachment-id tgw-attach-0fe13b6f145a1c81e
+{
+    "Propagation": { "TransitGatewayAttachmentId": "tgw-attach-0fe13b6f145a1c81e", "State": "enabled" }
+}
+(Da thuc hien cho ca 4 VPC)
+
+[BUOC 6: CAP NHAT VPC ROUTE TABLES]
+$ aws ec2 create-route --route-table-id rtb-0d6f8ffd7e4838bdb ... (VPC1)
+{ "Return": true }
+$ aws ec2 create-route --route-table-id rtb-00a8ff7627e17e556 ... (VPC2)
+{ "Return": true }
+$ aws ec2 create-route --route-table-id rtb-014fb19f8c2c3eba3 ... (VPC3)
+{ "Return": true }
+$ aws ec2 create-route --route-table-id rtb-02caf6f1bd7f5f4f9 ... (VPC4)
+{ "Return": true }
+
+[BUOC 6: KIEM TRA KET NOI CUOI CUNG (TEST SUCCESS - NGUYEN VAN TERMINAL)]
+Ping VPC2 (172.16.2.9) tu VPC1:
+PING 172.16.2.9 (172.16.2.9) 56(84) bytes of data.
+64 bytes from 172.16.2.9: icmp_seq=1 ttl=254 time=1.72 ms
+64 bytes from 172.16.2.9: icmp_seq=2 ttl=254 time=0.501 ms
+64 bytes from 172.16.2.9: icmp_seq=3 ttl=254 time=0.538 ms
+64 bytes from 172.16.2.9: icmp_seq=4 ttl=254 time=0.520 ms
+64 bytes from 172.16.2.9: icmp_seq=5 ttl=254 time=0.542 ms
+
+--- 172.16.2.9 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4068ms
+
+Ping VPC4 (172.16.4.13) tu VPC1:
+PING 172.16.4.13 (172.16.4.13) 56(84) bytes of data.
+64 bytes from 172.16.4.13: icmp_seq=1 ttl=254 time=1.46 ms
+64 bytes from 172.16.4.13: icmp_seq=2 ttl=254 time=0.277 ms
+64 bytes from 172.16.4.13: icmp_seq=3 ttl=254 time=0.275 ms
+64 bytes from 172.16.4.13: icmp_seq=4 ttl=254 time=0.269 ms
+64 bytes from 172.16.4.13: icmp_seq=5 ttl=254 time=0.298 ms
+
+--- 172.16.4.13 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4050ms
+
+[BUOC 7: DON DEP TAI NGUYEN - CHI TIET TERMINAL]
+$ aws ec2 delete-transit-gateway-vpc-attachment --transit-gateway-attachment-id tgw-attach-0fe13b6f145a1c81e
+(Phan hoi: State: deleting)
+
+$ aws ec2 delete-transit-gateway-route-table --transit-gateway-route-table-id tgw-rtb-0709ceabfe0f42742
+{ "State": "deleting" }
+
+$ aws ec2 delete-transit-gateway --transit-gateway-id tgw-058ef8d76a862176e
+{ "State": "deleting" }
+
+$ aws cloudformation delete-stack --stack-name Lab20-Stack
+$ aws ec2 delete-key-pair --key-name tgw-key
+{ "Return": true }
+
+$ aws cloudformation describe-stacks --stack-name Lab20-Stack
+aws: [ERROR]: Stack with id Lab20-Stack does not exist
+(Log: Da don dep sach se!)
+
+[KIEM TRA CUOI CUNG TREN AWS - THANH CONG]
+$ aws ec2 describe-transit-gateways
+(Status: deleted)
+$ aws cloudformation list-stacks (Lab20-Stack)
+(Status: None - Stack da bi xoa hoan toan)
+$ aws ec2 describe-instances (running)
+(Status: None - Khong con instance nao)
+$ aws ec2 describe-key-pairs (tgw-key)
+(Status: None - Key Pair da bi xoa)
+
+-> KET LUAN: AWS DA SACH SE 100%.
