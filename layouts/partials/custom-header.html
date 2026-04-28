@@ -1,0 +1,14 @@
+<script>
+  (function() {
+    // Kịch bản tự động chuyển hướng ngôn ngữ dựa trên trình duyệt
+    var path = window.location.pathname;
+    // Kiểm tra nếu người dùng đang ở trang chủ (gốc của repo)
+    if (path === '/FCAJ/' || path === '/FCAJ/index.html' || path === '/') {
+      var userLang = navigator.language || navigator.userLanguage; 
+      if (userLang && userLang.toLowerCase().startsWith('vi')) {
+        // Nếu trình duyệt là tiếng Việt, chuyển hướng sang /vi/
+        window.location.href = window.location.origin + '/FCAJ/vi/';
+      }
+    }
+  })();
+</script>
