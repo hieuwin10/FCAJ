@@ -9,47 +9,30 @@ pre: " <b> 1.6. </b> "
 
 ### Mục tiêu tuần 6:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hiểu và quản lý hạn ngạch (Quotas) của các tài nguyên IAM.
+* Sử dụng AWS KMS để mã hóa dữ liệu trên S3 và quản lý khóa tập trung.
+* Giám sát và truy vết mọi hoạt động trên tài khoản AWS thông qua AWS CloudTrail.
+* Sử dụng Amazon Athena để truy vấn log và phân tích sự kiện bảo mật.
+* So sánh và thực hành phân biệt giữa Access Keys và IAM Roles để áp dụng Best Practices.
+* Sử dụng AWS Secrets Manager để quản lý thông tin nhạy cảm cho ứng dụng.
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - **Thực hành Lab 30:** Quản lý IAM User Quota <br>&emsp; + Kiểm tra giới hạn IAM User hiện tại <br>&emsp; + Sử dụng Python Script tạo hàng loạt User <br>&emsp; + Yêu cầu tăng Quota khi cần thiết | 18/05/2026   | 18/05/2026      | [Lab 30-2](https://www.youtube.com/watch?v=J9fI9W9J-t8) <br> [Lab 30-3.1](https://www.youtube.com/watch?v=VzZk_1q-1xM) <br> [Lab 30-3.2](https://www.youtube.com/watch?v=R9o_oO1tSgY) |
+| 3   | - **Thực hành Lab 33:** KMS, CloudTrail & Athena <br>&emsp; + Mã hóa S3 Bucket bằng KMS <br>&emsp; + Giám sát truy cập bằng CloudTrail <br>&emsp; + Truy vấn log sự kiện bằng Amazon Athena | 19/05/2026   | 19/05/2026      | [Lab 33-2.1.1](https://www.youtube.com/watch?v=Yf1v2M1XwM0) <br> [Lab 33-2.2](https://www.youtube.com/watch?v=kYyceAFqsUg) <br> [Lab 33-4.1](https://www.youtube.com/watch?v=YDAXEiY8TzU) <br> [Lab 33-5.1](https://www.youtube.com/watch?v=Yr-09VhrNHU) |
+| 4   | - **Thực hành Lab 44:** Chính sách phân quyền nâng cao <br>&emsp; + Phân biệt Inline Policy vs Managed Policy <br>&emsp; + Thực hành ủy quyền truy cập (Delegate access) <br>&emsp; + Logic đánh giá Policy của AWS | 20/05/2026   | 20/05/2026      | [Lab 44-2.2](https://www.youtube.com/watch?v=BivRALFsoxQ) <br> [Lab 44-2.5](https://www.youtube.com/watch?v=7_1A2Jxl7_c) <br> [Lab 44-3.1](https://www.youtube.com/watch?v=-iGkIHh9mXo) <br> [Lab 44-3.2](https://www.youtube.com/watch?v=aq-YDewEyhA) |
+| 5   | - **Thực hành Lab 48:** Bảo mật thông tin nhạy cảm <br>&emsp; + So sánh Access Keys vs IAM Role cho EC2 <br>&emsp; + Sử dụng AWS Secrets Manager quản lý mật khẩu <br>&emsp; + Audit quyền truy cập tài nguyên | 21/05/2026   | 21/05/2026      | [Lab 48-2.1](https://www.youtube.com/watch?v=vkBJ0Cxc6Nw) <br> [Lab 48-2.2](https://www.youtube.com/watch?v=XXjEpIRWJBk) <br> [Lab 48-3.1](https://www.youtube.com/watch?v=pJWANviu8QM) <br> [Lab 48-3.4](https://www.youtube.com/watch?v=Yr-09VhrNHU) |
+| 6   | - **Tổng kết Module 05:** <br>&emsp; + Rà soát lại toàn bộ kiến thức bảo mật <br>&emsp; + Hoàn thiện các bài Lab còn thiếu <br>&emsp; + Chuẩn bị cho Module 06 (Databases) | 22/05/2026   | 22/05/2026      | |
 
 
 ### Kết quả đạt được tuần 6:
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
+* Hiểu rõ cách bảo vệ dữ liệu "at rest" và "in transit" sử dụng dịch vụ mã hóa.
+* Có khả năng phân tích và điều tra các sự kiện bất thường trên AWS bằng log.
+* Biết cách áp dụng nguyên tắc "Least Privilege" thông qua việc thiết kế Policy chặt chẽ.
+* Thành thạo việc sử dụng Roles thay cho Access Keys để tăng tính bảo mật.
+* Biết cách quản lý tập trung và tự động xoay vòng mật khẩu với Secrets Manager.
 * ...
 
 
