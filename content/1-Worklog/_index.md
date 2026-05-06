@@ -17,7 +17,7 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 
 **Week 3:** [AWS Compute & Storage (EC2, Auto Scaling, Backup, S3 & CloudFront)](1.03-week3/)
 
-**Week 4:** [Doing task C...](1.04-week4/)
+**Week 4:** [Week 4](1.04-Week4/) | 05/04/2026 | Learn advanced storage services: AWS Backup, S3 Advanced, Storage Gateway, and Amazon FSx.
 
 **Week 5:** [Doing task D...](1.05-week5/)
 
