@@ -32,4 +32,4 @@ pre: " <b> 1.4. </b> "
 * Biết cách tối ưu hóa chi phí S3 thông qua Lifecycle Policies và Storage Classes.
 * Triển khai thành công hệ thống tệp tin Hybrid sử dụng Storage Gateway.
 * Cấu hình và quản trị thành thạo Amazon FSx cho các ứng dụng doanh nghiệp.
-* ...
+
