@@ -17,20 +17,20 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 
 **Week 3:** [AWS Compute & Storage (EC2, Auto Scaling, Backup, S3 & CloudFront)](1.03-week3/)
 
-**Week 4:** [Week 4](1.04-Week4/) | 05/04/2026 | Learn advanced storage services: AWS Backup, S3 Advanced, Storage Gateway, and Amazon FSx.
+**Week 4:** [Advanced Storage (AWS Backup, S3 Advanced, Storage Gateway & FSx)](1.04-week4/)
 
-**Week 5:** [Doing task D...](1.05-week5/)
+**Week 5:** [Serverless, IAM & Security (Lambda, Cognito, Organization, Security Hub)](1.05-week5/)
 
-**Week 6:** [Doing task E...](1.06-week6/)
+**Week 6:** [Advanced IAM & Security Management (Policy, Role, KMS, CloudTrail)](1.06-week6/)
 
-**Week 7:** [Doing task G...](1.07-week7/)
+**Week 7:** [Databases & In-memory Caching (RDS, Aurora, Redshift, ElastiCache)](1.07-week7/)
 
-**Week 8:** [Doing task H...](1.08-week8/)
+**Week 8:** [Data Migration Service (DMS) & Database Migration Labs](1.08-week8/)
 
-**Week 9:** [Doing task I...](1.09-week9/)
+**Week 9:** [Data Analytics Fundamental (Kinesis, Glue, Athena, QuickSight)](1.09-week9/)
 
-**Week 10:** [Doing task L...](1.10-week10/)
+**Week 10:** [Amazon DynamoDB - NoSQL Design Patterns & Serverless Architecture](1.10-week10/)
 
-**Week 11:** [Doing task M...](1.11-week11/)
+**Week 11:** [AWS Tools & Developer Services (CloudShell, SDK, Cloud9, DataBrew)](1.11-week11/)
 
-**Week 12:** [Doing task N...](1.12-week12/)
+**Week 12:** [End-to-End Data Analytics Pipeline & Production Project](1.12-week12/)
