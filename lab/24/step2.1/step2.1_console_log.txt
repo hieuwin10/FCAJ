@@ -1,0 +1,7 @@
+cat << 'EOF' > "/run/media/sieuchunhiem/9090AC8290AC7100/Users/Sieu chu nhiem/Desktop/aws/fcj-workshop-template/lab/24/step2.1/step2.1_console_log.txt"
+[INFO] 2026-05-06 11:54:36 - File Gateway Activated successfully.
+[CONSOLE] Command: aws storagegateway activate-gateway --gateway-name filesgw
+[OUTPUT] GatewayARN: arn:aws:storagegateway:ap-southeast-1:120259362620:gateway/sgw-49750D20
+[INFO] 2026-05-06 11:56:02 - Cache Disk /dev/nvme1n1 assigned.
+[STATUS] Success
+EOF

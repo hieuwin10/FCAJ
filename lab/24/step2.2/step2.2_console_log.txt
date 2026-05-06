@@ -1,0 +1,6 @@
+cat << 'EOF' > "/run/media/sieuchunhiem/9090AC8290AC7100/Users/Sieu chu nhiem/Desktop/aws/fcj-workshop-template/lab/24/step2.2/step2.2_console_log.txt"
+[INFO] 2026-05-06 11:56:18 - SMB File Share created for S3 Bucket.
+[CONSOLE] Command: aws storagegateway create-smb-file-share --location s3://s3-instancestoragegw-sieuchunhiem-2023
+[OUTPUT] FileShareARN: arn:aws:storagegateway:ap-southeast-1:120259362620:share/share-8B3C2BEA
+[STATUS] Success
+EOF

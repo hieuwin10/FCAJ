@@ -1,0 +1,7 @@
+cat << 'EOF' > "/run/media/sieuchunhiem/9090AC8290AC7100/Users/Sieu chu nhiem/Desktop/aws/fcj-workshop-template/lab/24/step1.2/step1.2_console_log.txt"
+[INFO] 2026-05-06 11:28:48 - Default VPC created and launching EC2 instance...
+[CONSOLE] Command: aws ec2 run-instances --image-id ami-0a7b2cdff3f337488 --instance-type m4.large --subnet-id subnet-004c3d645ff7276a4
+[OUTPUT] InstanceId: i-09556a696b17e65a4, Public IP: 54.179.109.149
+[INFO] 2026-05-06 11:28:48 - Instance is running.
+[STATUS] Success - Instance i-09556a696b17e65a4 is active at 54.179.109.149
+EOF

@@ -1,0 +1,7 @@
+cat << 'EOF' > "/run/media/sieuchunhiem/9090AC8290AC7100/Users/Sieu chu nhiem/Desktop/aws/fcj-workshop-template/lab/24/step1.1/step1.1_console_log.txt"
+[INFO] 2026-05-06 11:25:55 - Starting S3 Bucket creation process...
+[CONSOLE] Command: aws s3 mb s3://s3-instancestoragegw-sieuchunhiem-2023 --region ap-southeast-1
+[OUTPUT] make_bucket: s3-instancestoragegw-sieuchunhiem-2023
+[INFO] Bucket created successfully.
+[STATUS] Success
+EOF

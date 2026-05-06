@@ -1,0 +1,12 @@
+cat << 'EOF' > "/run/media/sieuchunhiem/9090AC8290AC7100/Users/Sieu chu nhiem/Desktop/aws/fcj-workshop-template/lab/24/step3/step3_console_log.txt"
+[INFO] 2026-05-06 12:01:52 - Starting full resource cleanup...
+[CONSOLE] Command: aws storagegateway delete-file-share / delete-gateway / ec2 terminate-instances / s3 rb
+[OUTPUT] 
+- Deleted File Share: share-8B3C2BEA
+- Deleted Gateway: sgw-49750D20
+- Terminated Instance: i-0088d5c7afbcc599f
+- Removed S3 Bucket: s3-instancestoragegw-sieuchunhiem-2023
+- Deleted SG: storagegw-instance-sg
+- Deleted Key Pair: storagegw-key
+[STATUS] Success - Everything has been wiped out.
+EOF

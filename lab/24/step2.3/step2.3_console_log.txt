@@ -1,0 +1,9 @@
+cat << 'EOF' > "/run/media/sieuchunhiem/9090AC8290AC7100/Users/Sieu chu nhiem/Desktop/aws/fcj-workshop-template/lab/24/step2.3/step2.3_console_log.txt"
+[INFO] 2026-05-06 11:57:00 - Mount Command for Windows.
+[INPUT]
+- Command: net use Z: \18.141.140.78$S3_BUCKET_NAME /user:sgw-49750D20\smbguest
+- Password: Password123!
+[OUTPUT]
+- Result: The command completed successfully.
+[STATUS] Success - Your network drive is ready!
+EOF
