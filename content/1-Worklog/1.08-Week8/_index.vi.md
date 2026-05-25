@@ -9,48 +9,25 @@ pre: " <b> 1.8. </b> "
 
 ### Mục tiêu tuần 8:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tìm hiểu và ứng dụng các dịch vụ phân tích dữ liệu và streaming (Kinesis, Glue, Athena, QuickSight).
+* Thực hành chuyên sâu về cơ sở dữ liệu NoSQL với Amazon DynamoDB (thiết kế, phân tích chi phí, truy vấn).
+* Sử dụng các công cụ tương tác và phát triển của AWS (CloudShell, Cloud9, AWS SDK).
+* Xây dựng luồng xử lý dữ liệu (Data Pipeline) hoàn chỉnh với Glue DataBrew và EMR.
+* Thiết kế và trực quan hóa dữ liệu qua các Dashboard tương tác trên QuickSight.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - **Thực hành Lab 35:** Phân tích và Streaming dữ liệu <br>&emsp; + Kinesis Delivery Stream <br>&emsp; + Glue Crawler & Data Check <br>&emsp; + Phân tích bằng Athena & QuickSight | 01/06/2026 | 01/06/2026 | [Lab 35-3](https://www.youtube.com/watch?v=uYCW51_pBBA) đến [Lab 35-7](https://www.youtube.com/watch?v=r9NehOtENWQ) |
+| 3 | - **Thực hành Lab 39 & 40:** Amazon DynamoDB <br>&emsp; + Khám phá DynamoDB, Backup & Clean up <br>&emsp; + Advanced Design Patterns (LADV, LMR, LEDA) <br>&emsp; + Query Data, Cost Allocation & Tagging | 02/06/2026 | 02/06/2026 | [Lab 39](https://www.youtube.com/watch?v=w5bqLYPv6DA) đến [Lab 40](https://www.youtube.com/watch?v=ggFZt2JGIeM) |
+| 4 | - **Thực hành Lab 60 & 70:** Tools & DataPrep <br>&emsp; + CloudShell, Console, SDK <br>&emsp; + Tạo Cloud9 Instance & Upload Dataset <br>&emsp; + Thiết lập DataBrew (Profiling, Clean, Transform) | 03/06/2026 | 03/06/2026 | [Lab 60-1](https://www.youtube.com/watch?v=cqczgtnvHjc) đến [Lab 70-2](https://www.youtube.com/watch?v=O-xRfw94xlY) |
+| 5 | - **Thực hành Lab 72:** Data Engineering Pipeline <br>&emsp; + Ingest, Store, Catalog Data <br>&emsp; + Transform bằng Glue (GUI/Interactive), DataBrew, EMR <br>&emsp; + Phân tích (Athena, Kinesis Analytics) & Trực quan hóa | 04/06/2026 | 04/06/2026 | [Lab 72-2](https://www.youtube.com/watch?v=7qyGJLJfhws) đến [Lab 72-13](https://www.youtube.com/watch?v=LWxy16RyBPY) |
+| 6 | - **Thực hành Lab 73:** Dashboards <br>&emsp; + Build Dashboard <br>&emsp; + Dashboard Improvements <br>&emsp; + Create Interactive Dashboard | 05/06/2026 | 05/06/2026 | [Lab 73-3](https://www.youtube.com/watch?v=kmmalCxSV6A) đến [Lab 73-5](https://www.youtube.com/watch?v=KrTFP_qa0Ww) |
 
 ### Kết quả đạt được tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Hoàn thành việc thiết lập hệ thống thu thập và phân tích dữ liệu luồng (streaming data) trên AWS.
+* Sử dụng thành thạo DynamoDB cho các ứng dụng Serverless và biết cách tối ưu hóa chi phí.
+* Làm quen và có thể làm sạch, biến đổi dữ liệu một cách tự động bằng Glue DataBrew và EMR.
+* Có thể phân tích tập dữ liệu lớn bằng Athena và tạo ra các báo cáo trực quan, sinh động thông qua QuickSight.
+* Nắm bắt được quy trình xây dựng một kho dữ liệu (Data Warehouse) hiện đại với Redshift và các dịch vụ Analytics của AWS.

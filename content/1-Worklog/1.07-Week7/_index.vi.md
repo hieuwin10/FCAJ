@@ -9,48 +9,26 @@ pre: " <b> 1.7. </b> "
 
 ### Mục tiêu tuần 7:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Ôn tập các khái niệm về cơ sở dữ liệu (Database Concepts).
+* Tìm hiểu và triển khai Amazon RDS & Amazon Aurora.
+* Tìm hiểu các dịch vụ dữ liệu khác như Redshift, Elasticache.
+* Thực hành tạo hạ tầng mạng (VPC, Subnet, Security Group) và triển khai ứng dụng sử dụng RDS.
+* Thực hành kết nối, cấu hình và migrate dữ liệu (từ MS SQL/Oracle sang Aurora MySQL).
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2 | - **Lý thuyết Module 06:** <br>&emsp; + Database Concepts review <br>&emsp; + Amazon RDS & Amazon Aurora <br>&emsp; + Redshift & Elasticache | 25/05/2026 | 25/05/2026 | [Module 06-01](https://www.youtube.com/watch?v=OOD2RwWuLRw) <br> [Module 06-02](https://www.youtube.com/watch?v=qbrobQZrokY) <br> [Module 06-03](https://www.youtube.com/watch?v=UvdiRW34aNI) |
+| 3 | - **Thực hành Lab 05 (Phần 1):** Hạ tầng mạng & EC2 <br>&emsp; + Create a VPC & Subnet Group <br>&emsp; + Create Security Groups (EC2 & RDS) <br>&emsp; + Create EC2 instance | 26/05/2026 | 26/05/2026 | [Lab 05-2.1](https://www.youtube.com/watch?v=B5rOeWQWg1c) <br> [Lab 05-2.2](https://www.youtube.com/watch?v=VSKRP7BFsoQ) <br> [Lab 05-2.3](https://www.youtube.com/watch?v=oMjPdSmU4co) <br> [Lab 05-2.4](https://www.youtube.com/watch?v=OWjX0FsbX9E) <br> [Lab 05-3](https://www.youtube.com/watch?v=NZZRBfCJ2AY) |
+| 4 | - **Thực hành Lab 05 (Phần 2):** Database & Application <br>&emsp; + Create RDS database instance <br>&emsp; + Application Deployment <br>&emsp; + Backup and restore <br>&emsp; + Clean up resources | 27/05/2026 | 27/05/2026 | [Lab 05-4](https://www.youtube.com/watch?v=SlP-KdSs3IM) <br> [Lab 05-5](https://www.youtube.com/watch?v=P_dyDq7rp1A) <br> [Lab 05-6](https://www.youtube.com/watch?v=7So4xNZJ6bk) <br> [Lab 05-7](https://www.youtube.com/watch?v=0WiTedZTcpQ) |
+| 5 | - **Thực hành Lab 43 (Phần 1):** Database Migration <br>&emsp; + Kết nối EC2 (RDP Client, Fleet Manager) <br>&emsp; + Cấu hình Source DB (SQLSrv, Oracle) <br>&emsp; + Migration Config (MSSQL to Aurora MySQL) | 28/05/2026 | 28/05/2026 | [Lab 43-01](https://www.youtube.com/watch?v=cxwAOP1379s) đến [Lab 43-08](https://www.youtube.com/watch?v=bTWkX3xHN4s) |
+| 6 | - **Thực hành Lab 43 (Phần 2):** Migration & Troubleshooting <br>&emsp; + Schema Conversion <br>&emsp; + Create Migration Task & Endpoint <br>&emsp; + Serverless Migration & Logging <br>&emsp; + Troubleshooting (Mem Pressure, Table Err) | 29/05/2026 | 29/05/2026 | [Lab 43-09](https://www.youtube.com/watch?v=s-6mXTFXwG8) đến [Lab 43-17](https://www.youtube.com/watch?v=MU8XHe3OoxQ) |
 
 ### Kết quả đạt được tuần 7:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
-
+* Nắm vững kiến thức về các loại cơ sở dữ liệu trên AWS (RDS, Aurora, Redshift, Elasticache).
+* Tự thiết lập được hệ thống mạng (VPC, Subnet) an toàn để triển khai Database.
+* Khởi tạo, cấu hình và bảo trì thành công dịch vụ Amazon RDS.
+* Thực hiện thành công việc kết nối và triển khai ứng dụng thực tế với RDS.
+* Làm quen với quá trình di chuyển dữ liệu (Migration) từ các hệ quản trị CSDL truyền thống (MS SQL, Oracle) lên AWS (Aurora MySQL).
+* Có kinh nghiệm cơ bản trong việc chẩn đoán và khắc phục sự cố (troubleshooting) liên quan đến Database Migration.
