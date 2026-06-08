@@ -5,9 +5,6 @@ weight: 1
 chapter: false
 pre: " <b> 3.1. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Warning:** The information below is for reference purposes only, please **do not copy verbatim** for your report including this warning.
-{{% /notice %}}
 
 # How Bedrock Streaming optimizes its AWS costs
 

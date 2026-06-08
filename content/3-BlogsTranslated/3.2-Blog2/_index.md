@@ -1,13 +1,10 @@
 ---
 title: "Blog 2: Achieve least-privilege access for Amazon Route 53 Profiles"
 date: 2026-06-04
-weight: 2
+weight: 1
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Warning:** The information below is for reference purposes only, please **do not copy verbatim** for your report including this warning.
-{{% /notice %}}
 
 # Achieve least-privilege access for Amazon Route 53 Profiles
 
