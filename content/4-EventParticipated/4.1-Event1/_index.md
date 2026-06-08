@@ -1,110 +1,63 @@
 ---
-title: "Event 1: AWS Community Day 2026"
-date: 2026-05-23
+title: "Event 1: FCAJ Community Day 2026"
+date: 2026-05-09
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
+### Event Purpose
 
-
-
-### Event Objectives
-
-- **Acquire Cutting-Edge Tech Insights:** Learn modern cloud architecture paradigms, optimize global Content Delivery Networks (CDNs), and enhance enterprise cloud infrastructure security.
-- **Study Next-Gen Generative AI Applications:** Deep dive into Context Engineering, non-determinism in LLMs, and enterprise-grade Multi-Agent Systems.
-- **Career Planning & Networking:** Learn from seasoned experts' real-world stories and connect with the active AWS Vietnam community.
-
----
-
-### Speakers
-
-- **Tín Trương** – Platform Engineer at Gotadi (Speaker for *"Context Is Everything"*)
-- **UTMorpho Dev Team** – LotusHacks Hackathon Winners (Speakers for *"36 hrs with LotusHacks"*)
-- **AWS Infrastructure Expert** – AWS Solutions Architect (Speaker for *"From Edge To Origin: CloudFront"*)
-- **AWS Data Solutions Specialist** – AWS Tech Specialist (Speaker for *"Friendly AI Assistant with Amazon Quick"*)
-- **Đức Đào** – Cloud Phoenix Specialist (Speaker for *"Non-Determinism of LLM Settings"*)
-- **AI Solutions Architect** – Enterprise Systems Architect (Speaker for *"Enterprise-Grade Multi-Agent System"*)
+- **Improving Study Methods:** Providing guidance on how to "hack your brain" to maintain study motivation and make learning as engaging as playing games.
+- **Enhancing AI Skills:** Sharing optimal Prompt Engineering methods to interact effectively with LLMs and avoid AI hallucination.
+- **Practical Career Orientation:** Offering insights from an employer's perspective on candidate evaluation, the importance of foundational knowledge, and integrity in the workplace, especially in the AI era.
 
 ---
 
 ### Key Highlights
 
-#### 1. Context Engineering & Future Tech Trends
-- **The Power of Context:** LLMs have massive general knowledge but fail (yielding generic or hallucinated answers) without detailed context. Context Engineering—such as defining specific user roles—produces vastly superior results compared to dumping massive, cluttered documents that clog the attention window.
-- **Second AI Brain:** The paradigm shift from real-time prompt drafting to persistent long-term memories by integrating note-taking software (Obsidian) with AI for automated data retrieval.
-- **Jevons Paradox in the AI Era:** As technology reduces software development costs (0 to 1), the absolute volume of software will explode. Job opportunities will shift heavily toward operating, securing, integrating, and scaling systems from 1 to N.
+#### 1. Brain Hacking for Study Addiction (Dopamine-Driven Learning) - *Speaker: Mr. Huỳnh Hoàng Long*
+- **The Problem:** Social media and games offer instant gratification and curiosity, causing the brain to continuously release dopamine. Meanwhile, studying typically yields slow results.
+- **The Solution:** 
+  - Trick the brain by creating small, random rewards after each study session (e.g., drawing a random reward after 10 minutes of studying).
+  - Use the **fear of loss**: Maintain a daily learning streak on a calendar, as humans naturally fear losing what they have built up.
+  - **The 2-Minute Rule:** If a task takes less than 2 minutes, do it immediately without procrastination.
+  - Break down large goals to avoid feeling overwhelmed (e.g., studying one small AWS service per day instead of cramming for 5 hours).
 
-#### 2. 36 hrs with LotusHacks – Building UTMorpho from Idea to Reality
-- **Hackathon Sprint & Brainstorming:** Real-world experiences of starting from scratch to create a novel idea at LotusHacks under intense constraints.
-- **Product Shaping & pressure development:** Defining practical user pain points, framing the UTMorpho application architecture, and navigating technical failures during a non-stop 36-hour sprint.
-- **MVP Demo & Key Turning Points:** Presenting the UTMorpho functional overview, learning from setbacks, and charting the future roadmap.
+#### 2. Ultimate Prompt Engineering: Enhancing LLM Output Quality - *Speaker: Mr. Nguyễn Tuấn Thịnh*
+- **Prompt Design Skills:** For optimal AI responses, provide 7 key components: Role, Instruction, Context, Input, Output format, Examples, and Constraints.
+- **Advanced Techniques:** Utilize *Chain of Thought* (step-by-step reasoning) or *Tree of Thought*. Avoid negative phrasing ("do not") to minimize AI hallucination.
+- **Practical Demo - Proptimizer:** An application built on AWS to optimize prompts. The architecture uses:
+  - **Frontend:** S3 & CloudFront (CDN).
+  - **Auth:** Amazon Cognito.
+  - **Backend (Serverless):** API Gateway & AWS Lambda.
+  - **Database & AI:** DynamoDB for history and Amazon Bedrock for AI Foundation models.
 
-#### 3. Infrastructure Optimization at the Edge (Amazon CloudFront)
-- **CloudFront as a Foundation:** Acting as a high-performance Content Delivery Network (CDN) to serve static and dynamic resources worldwide with minimal latency.
-- **Cost & Speed Improvements:** Caching and compressing data at edge locations to drastically reduce bandwidth charges and load on origin servers.
-- **Edge Security:** Integrating AWS WAF and AWS Shield directly at edge zones to shield the system from DDoS and malicious attacks before they reach core servers.
+#### 3. Why Haven't You Started Working Yet? - Employer's Perspective - *Speaker: Mr. Nguyễn Khang (Solutions Architect at Cloud Kinetics)*
+- **Foundational Thinking:** Technology constantly changes; you don't need to know every framework or service. The most important thing is a solid foundation and a strong problem-solving thought process.
+- **AI as an Amplifier:** AI makes good engineers better and exposes poor ones. If you use AI to complete a task without truly understanding the "Why," employers will notice. Understanding cannot be outsourced to AI.
+- **Top 5 Recruitment Criteria for Freshers:**
+  1. Attitude (Most crucial for freshers).
+  2. Education/Qualifications.
+  3. Skills.
+  4. Experience vs. Exposure (You may lack years of experience, but exposure to diverse projects is a huge plus).
+  5. Innate qualities (Natural abilities).
+- **Integrity:** Always do the right thing and follow through, even when no one is watching. Maintain a long-term vision and avoid working in silos.
 
-#### 4. Intelligent AI Assistants via Amazon Quick
-- **Quick Chat & Quick Flows:** Leveraging virtual assistants to query raw data and build smart automated workflows (No-code) using natural language.
-- **Quick Spaces & Quick Sight:** Collaboration vaults for knowledge sharing and interactive dashboard generation through conversational queries.
-
-#### 5. The Deep Mechanics of Non-Determinism in LLMs
-- **Token Prediction:** LLMs predict subsequent tokens using logits probability scoring.
-- **Debunking the `Temperature = 0` Myth:** Setting temperature to 0 does not guarantee 100% identical responses across separate API runs. GPU-level floating-point parallel computation optimizations introduce tiny calculation ordering variations, which accumulate and drift outputs for complex logic tasks.
-
-#### 6. Enterprise Multi-Agent Systems & Credit Scoring
-- **Multi-Agent Paradigm:** Solving complex tasks by delegating specific roles, goals, and backstories to multiple specialized agents (Financial Collector, Risk Analyst, Decision Maker) instead of a single agent.
-- **Model Context Protocol (MCP):** A unified standard connecting LLMs to data sources, streamlining complex $M \times N$ system integrations down to a clean $M + N$ model.
-
----
-
-### Key Takeaways
-
-#### Design Mindset
-- **Edge-First & Well-Architected Systems:** Placing performance, cost optimization, and multi-layered security at the edge as core design principles.
-- **Multi-Agent Coordination & Human-in-the-Loop:** Developing specialized AI agents while maintaining humans in a managerial (reviewing and approving) role.
-- **Designing for Unpredictability:** Accepting that LLM outputs can vary slightly and writing automated testing wrappers to validate chatbot performance.
-
-#### Technical Architecture
-- Applying the Model Context Protocol (MCP) to streamline enterprise data API integration with LLMs.
-- Implementing advanced context engineering and external persistent memory (Second AI Brain) to control output quality.
-- Mitigating LLM non-determinism by using `Temperature = 0.1` to avoid the infinite loops of Greedy Decoding, and adjusting `repeat_penalty` for self-hosted models.
-
-#### Enterprise Workflows
-- Moving from proof-of-concept (POC) to production requires strict compliance and rigid security standards.
-- **The Copy-Paste Code Trap:** AI gets you from 0 to 1 quickly, but scaling from 1 to N requires software engineering discipline. Copy-pasting massive AI-generated code blocks (`Ctrl+C` / `Ctrl+V`) without strict code reviews is dangerous and can crash production systems.
+#### 4. Automated Software Development with AI Agents (BMX Method) - *Speaker: Ms. Thảo (Software Developer at VIB)*
+- **Current State of AI Coding:** Chatting directly with AI (like ChatGPT) without a clear system architecture often leads to spaghetti code, context forgetting (hallucination), and maintenance difficulties.
+- **BMX Method:** An open-source solution that divides work into small tasks adhering to the Software Development Life Cycle (SDLC).
+- **Multi-Agent Ecosystem:**
+  - **PM Agent:** Analyzes ideas and automatically generates Product Requirement Documents (PRD).
+  - **Architect Agent:** Based on the PRD, designs the System Architecture and selects appropriate technologies.
+  - **Scrum Master / BO Agent:** Breaks down Epics into Stories and manages the state flow (Draft -> Approve -> Block -> Review).
+  - **Developer Agent:** Automatically picks up approved stories, writes code, and updates statuses.
+  - **QA/Review Agent:** Automatically tests code, iterating in a continuous feedback loop until the bug count is zero.
+- **Advantages:** Reduces the context window load for each agent, prevents AI from being overwhelmed with noise, and easily scales while allowing human-in-the-loop intervention.
 
 ---
 
-### Applying to Work & Study
-
-- **Deploy Amazon CloudFront:** Set up CloudFront CDN to serve assets for academic web projects to optimize speed and protect backend APIs.
-- **Build Multi-Agent Prototypes:** Use LangChain or CrewAI frameworks to orchestrate coordination between multiple specialized agents for automated workflows.
-- **Enforce Code Review Discipline:** Read and comprehend every single line of AI-suggested code before merging. Enforce clean prompt patterns, intelligent temperature limits (`Temperature = 0.1`), and automated testing.
-
----
-
-### Event Experience
-
-#### Learning from highly skilled speakers
-- Absorbed hands-on platform engineering insights from Tín Trương and optimization techniques from Đức Đào.
-- Gained insights into infrastructure optimization and edge computing acceleration using Amazon CloudFront from the AWS Infrastructure Expert.
-
-#### Hands-on technical exposure
-- Inspired by the LotusHacks team's high-pressure 36-hour sprint to build the UTMorpho MVP, picking up invaluable lessons in teamwork, agility, and scope management.
-- Observed live demonstrations of Amazon Quick and the Virtual Credit Committee architecture.
-
-#### Networking & discussions
-- Had the opportunity to exchange ideas with students and cloud engineers from various universities and tech firms in HCMC.
-
-#### Lessons learned
-- The hyper-accelerated evolution of AI (capabilities doubling every 4 months) demands a proactive, continuous, and non-delayed learning approach.
-- The intersection of solid academic engineering fundamentals, disciplined AI utilization, and specialized domain knowledge is the golden key to unlocking premier career opportunities.
-
----
-
-#### Event Memorabilia Photos
-* [Insert your check-in photos, stage views, or exhibitor booth snapshots at Bitexco Financial Tower here]
-
-> **Conclusion:** AWS Community Day Vietnam 2026 was a brilliant learning experience. It not only strengthened my cloud and AI engineering knowledge but also shaped my professional mindset, instilling coding discipline and outlining a clear career development roadmap.
+### What I Learned
+- Understood the dopamine mechanism to self-motivate daily AWS study sessions without feeling bored or overwhelmed.
+- Learned how to optimize prompts when using AI and visualized a real-world Serverless AI architecture on AWS (S3, API Gateway, Lambda, Bedrock).
+- Realized the importance of deeply understanding the root of a problem (asking "Why" repeatedly) rather than just superficially learning tools. Attitude and integrity are the keys to advancing in this career.
