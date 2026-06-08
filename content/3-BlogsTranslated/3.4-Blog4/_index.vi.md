@@ -1,12 +1,11 @@
 ---
 title: "Blog 4: Bức tranh toàn cảnh: Giám sát thống nhất cho AWS Parallel Computing Service"
 date: 2026-06-02
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 3.4. </b> "
 ---
 
-# Bức tranh toàn cảnh: Giám sát thống nhất cho AWS Parallel Computing Service
 
 *bởi Ronald Hudson và Nate Haynes*
 *vào ngày 02 Tháng 6, 2026*

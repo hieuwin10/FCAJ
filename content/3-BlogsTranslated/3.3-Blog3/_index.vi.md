@@ -1,12 +1,11 @@
 ---
 title: "Blog 3: Xây dựng cơ sở dữ liệu Oracle có tính sẵn sàng cao với Amazon FSx for NetApp ONTAP"
 date: 2026-06-03
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# Xây dựng cơ sở dữ liệu Oracle có tính sẵn sàng cao với Amazon FSx for NetApp ONTAP
 
 *bởi Vignyanand Penumatcha và Sharath Lingareddy*
 *vào ngày 03 Tháng 6, 2026*

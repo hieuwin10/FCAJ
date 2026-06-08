@@ -1,12 +1,11 @@
 ---
 title: "Blog 2: Achieve least-privilege access for Amazon Route 53 Profiles"
 date: 2026-06-04
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# Achieve least-privilege access for Amazon Route 53 Profiles
 
 *by Aanchal Agrawal and Anushree Shetty*
 *on 04 JUN 2026*

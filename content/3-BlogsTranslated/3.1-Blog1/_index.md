@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# How Bedrock Streaming optimizes its AWS costs
 
 *by Pascal Martin, Iryna Oliinykova, and Ramzi Trabelsi*
 *on 02 JUN 2026*

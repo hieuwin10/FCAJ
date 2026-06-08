@@ -1,12 +1,11 @@
 ---
 title: "Blog 4: The complete picture: Unified monitoring for AWS Parallel Computing Service"
 date: 2026-06-02
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 3.4. </b> "
 ---
 
-# The complete picture: Unified monitoring for AWS Parallel Computing Service
 
 *by Ronald Hudson and Nate Haynes*
 *on 02 JUN 2026*

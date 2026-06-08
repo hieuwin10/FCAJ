@@ -1,12 +1,11 @@
 ---
 title: "Blog 3: Building highly available Oracle databases with Amazon FSx for NetApp ONTAP"
 date: 2026-06-03
-weight: 1
+weight: 3
 chapter: false
 pre: " <b> 3.3. </b> "
 ---
 
-# Building highly available Oracle databases with Amazon FSx for NetApp ONTAP
 
 *by Vignyanand Penumatcha and Sharath Lingareddy*
 *on 03 JUN 2026*

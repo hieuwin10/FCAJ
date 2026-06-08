@@ -1,12 +1,11 @@
 ---
 title: "Blog 2: Đạt được quyền truy cập đặc quyền tối thiểu cho Amazon Route 53 Profiles"
 date: 2026-06-04
-weight: 1
+weight: 2
 chapter: false
 pre: " <b> 3.2. </b> "
 ---
 
-# Đạt được quyền truy cập đặc quyền tối thiểu cho Amazon Route 53 Profiles
 
 *bởi Aanchal Agrawal và Anushree Shetty*
 *vào ngày 04 Tháng 6, 2026*

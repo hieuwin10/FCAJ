@@ -6,7 +6,6 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# Cách Bedrock Streaming tối ưu hóa chi phí AWS
 
 *bởi Pascal Martin, Iryna Oliinykova, và Ramzi Trabelsi*
 *vào ngày 02 Tháng 6, 2026*
