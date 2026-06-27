@@ -9,48 +9,24 @@ pre: " <b> 1.11. </b> "
 
 ### Mục tiêu tuần 11:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Hoàn thiện thiết kế kiến trúc hệ thống (Architecture Diagram) trên AWS.
+* Triển khai thành công hạ tầng mạng (VPC, Subnet, Security Group) và Database (RDS).
+* Đưa mã nguồn (Frontend/Backend) lên chạy thực tế trên môi trường AWS.
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --- | --- | --- | --- |
+| 2   | - Họp chốt thiết kế kiến trúc (Architecture Diagram) <br> - Chuẩn bị file cấu hình hạ tầng | 22/06/2026 | 22/06/2026 | |
+| 3   | - Triển khai hạ tầng mạng (VPC, Public/Private Subnets, Internet Gateway) | 23/06/2026 | 23/06/2026 | |
+| 4   | - Khởi tạo Database (Amazon RDS / DynamoDB) <br> - Cấu hình IAM Role và Security Group cho các luồng giao tiếp | 24/06/2026 | 24/06/2026 | |
+| 5   | - Triển khai Backend lên EC2 (hoặc ECS/Lambda) <br> - Triển khai Frontend lên Amazon S3 & CloudFront | 25/06/2026 | 25/06/2026 | |
+| 6   | - Tích hợp hệ thống, test luồng hoạt động <br> - Fix bug và tối ưu hóa <br> - Cập nhật tài liệu README | 26/06/2026 | 26/06/2026 | |
 
 
 ### Kết quả đạt được tuần 11:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Đã thiết kế và thống nhất xong toàn bộ kiến trúc AWS cho project.
+* Triển khai thành công Frontend hosting trên S3 + CloudFront có HTTPS.
+* Backend trên EC2 đã kết nối thành công và query được dữ liệu từ RDS.
+* Đã khắc phục thành công các lỗi liên quan đến phân quyền IAM và kết nối mạng trong Private Subnet.
 

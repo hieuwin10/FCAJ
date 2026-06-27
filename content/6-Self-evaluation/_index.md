@@ -8,8 +8,8 @@ pre: " <b> 6. </b> "
 
 
 
-During my internship at **[Company/Organization Name]** from **[start date]** to **[end date]**, I had the opportunity to learn, practice, and apply the knowledge acquired in school to a real-world working environment.  
-I participated in **[briefly describe the main project or task]**, through which I improved my skills in **[list skills: programming, analysis, reporting, communication, etc.]**.  
+During my internship at **First Cloud Journey (FCJ)** from **April 13, 2026** to **July 3, 2026**, I had the opportunity to learn, practice, and apply Cloud Computing knowledge to a real-world environment.  
+I participated in **an intensive AWS training program and directly designed and deployed the infrastructure for a real AWS project**, through which I significantly improved my skills in **Cloud system administration, troubleshooting, teamwork, and technical documentation**.  
 
 In terms of work ethic, I always strived to complete tasks well, complied with workplace regulations, and actively engaged with colleagues to improve work efficiency.
 
