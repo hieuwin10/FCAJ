@@ -1,6 +1,6 @@
 ---
 title : "Chuẩn bị backend code"
-date : 2024-01-01 
+date: 2026-06-30
 weight : 2 
 chapter : false
 pre : " <b> 5.2. </b> "
@@ -13,7 +13,7 @@ pre : " <b> 5.2. </b> "
 #### 1. Build backend code ở local
 
 1. Mở Terminal hoặc Command Prompt.
-2. Di chuyển vào thư mục backend:
+2. Di chuyển vào thư mục backend (Ví dụ):
 
 ```bash
 cd "C:\Users\Sieu chu nhiem\Desktop\aws-serverless-event-portal\backend"

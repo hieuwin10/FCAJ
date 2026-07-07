@@ -1,103 +1,84 @@
 ---
 title: "Bản đề xuất"
-date: 2024-01-01
+date: 2026-06-30
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+# AWS Serverless Event Management Portal 
+## Giải pháp Cổng thông tin Quản lý và Đăng ký Sự kiện Trực tuyến
 
 ### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+AWS Serverless Event Management Portal là một giải pháp quản lý sự kiện toàn diện, được thiết kế với mô hình kiến trúc không máy chủ (Serverless 100%) trên nền tảng AWS. Hệ thống cung cấp cổng thông tin cho phép người dùng đăng ký sự kiện, quản lý danh sách chờ (waitlist), điểm danh bằng mã QR, nhận gợi ý sự kiện và đánh giá sau sự kiện. Với việc tận dụng triệt để AWS Free Tier (Always Free & 12 Months Free), giải pháp này mang lại hiệu năng cao, bảo mật tốt mà chi phí vận hành hàng tháng xấp xỉ 0 USD.
 
 ### 2. Tuyên bố vấn đề  
 *Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+Các hệ thống quản lý sự kiện truyền thống thường tốn kém chi phí duy trì máy chủ (EC2, RDS) liên tục ngay cả khi không có người dùng, thiếu tính linh hoạt khi lưu lượng truy cập tăng đột biến, và gặp nhiều khó khăn trong khâu quản lý điểm danh vé tự động hay tích hợp danh sách chờ.
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+*Giải pháp đề xuất*  
+Xây dựng một kiến trúc hướng sự kiện (Event-Driven Architecture) bằng cách sử dụng các dịch vụ lõi của AWS. Giao diện web tĩnh (React/Vite) được phân phối qua Amazon S3 và CloudFront. Các luồng xử lý phía backend (API) được thực hiện bởi Amazon API Gateway kết nối với AWS Lambda, truy xuất dữ liệu từ Amazon DynamoDB (Single-Table Design). Hệ thống xác thực người dùng được giao cho Amazon Cognito, giúp giảm tải hoàn toàn việc quản lý bảo mật và server.
 
 *Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+Giải pháp tạo ra nền tảng chuyên nghiệp với 12 API endpoints có sẵn, tích hợp điểm danh bằng mã QR, gợi ý sự kiện, và bảo mật cấp doanh nghiệp. Với mô hình trả tiền theo lưu lượng thực tế (Pay-as-you-go) và tối ưu hóa AWS Free Tier, chi phí hàng tháng được duy trì ở mức 0 USD. Quá trình tự động hóa các thao tác thủ công và khả năng triển khai tức thì qua CloudFormation/SAM giúp tăng năng suất và thu hồi vốn đầu tư nhanh chóng.
 
 ### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+Hệ thống vận hành theo cơ chế **Event-Driven Architecture**, chỉ kích hoạt tài nguyên khi có yêu cầu.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+*Dịch vụ AWS sử dụng chính*  
+- **Amazon S3 & CloudFront**: Lưu trữ và phân phối giao diện web tĩnh (Frontend).  
+- **Amazon Cognito**: Quản lý tài khoản, phân quyền User/Admin và cung cấp JWT Token.  
+- **Amazon API Gateway**: Cổng giao tiếp REST API xử lý JWT và phân luồng.  
+- **AWS Lambda**: Thực thi logic nghiệp vụ (12 functions viết bằng Node.js/TypeScript).  
+- **Amazon DynamoDB**: Cơ sở dữ liệu NoSQL với thiết kế Single-Table Design tối ưu hiệu năng.  
+- **Amazon CloudWatch**: Giám sát (Monitoring), lưu trữ Log và thiết lập Alarm.  
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
-
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
-
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+*Luồng dữ liệu cơ bản*  
+1. Người dùng truy cập tên miền, tải trang tĩnh từ S3 qua CloudFront.
+2. Xác thực tài khoản qua Cognito để nhận JWT Token.
+3. Gửi request kèm Token lên API Gateway.
+4. API Gateway kiểm tra Token, gọi Lambda function tương ứng.
+5. Lambda đọc/ghi dữ liệu vào DynamoDB và trả kết quả về cho frontend.
 
 ### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+Dự án được chia thành hai phần chính: Backend và Frontend, được triển khai hoàn toàn tự động hoặc bán tự động.
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+*Backend (AWS SAM/CloudFormation)*  
+- **Nền tảng**: Node.js/TypeScript.
+- **Tính năng**: 12 Lambda functions hỗ trợ đăng ký, waitlist, QR check-in, gợi ý, export file .ics.
+- **Database**: Single-Table Design với 2 GSIs (Global Secondary Indexes) để hỗ trợ 17 thực thể, dùng DynamoDB Streams để đồng bộ số vé trống.
+- **Triển khai**: Đóng gói mã nguồn và sử dụng AWS CloudFormation (`template.yaml`) để dựng tự động toàn bộ hạ tầng backend (DynamoDB, API, Lambda, Cognito).
+
+*Frontend (Vite/React)*  
+- **Giao diện**: Xây dựng với Vite/React, gồm các tính năng như Protected Routes, Waitlist UI, Profile, QR Check-in Page, Review Rating Component.
+- **Triển khai**: Build ra các file tĩnh (HTML, CSS, JS) và upload lên Amazon S3, kích hoạt tính năng Static Website Hosting.
 
 ### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+Dự án được thực hiện và hoàn thành trong vòng 4 tuần:
+- **Tuần 1**: Thiết lập nền tảng, cơ sở dữ liệu DynamoDB, API cơ bản và Protected Routes (Frontend).  
+- **Tuần 2**: Hoàn thiện tính năng đăng ký, xác thực Cognito, Waitlist UI và User Profile.  
+- **Tuần 3**: Quản lý sự kiện cho Admin, điểm danh QR (QR Check-in), Đánh giá/Review.  
+- **Tuần 4**: Các tính năng nâng cao (Gợi ý sự kiện, Xuất lịch .ics, Danh sách thành viên) và tối ưu CloudFormation.
 
 ### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+Được thiết kế để tận dụng tối đa gói miễn phí (AWS Free Tier):  
+- **AWS Lambda**: 1 triệu requests/tháng, 400.000 GB-seconds -> $0  
+- **Amazon DynamoDB**: 25 GB storage, 25 RCU/WCU -> $0  
+- **Amazon CloudWatch**: 5 GB logs, 10 alarms -> $0  
+- **Amazon S3**: 5 GB storage tĩnh -> $0  
+- **Amazon Cognito**: Lên tới 50.000 Monthly Active Users -> $0  
+- **Amazon API Gateway**: Tính phí sau 12 tháng (hoặc vượt ngưỡng), khoảng $3.50/1 triệu requests.  
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
-
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+*Tổng chi phí hàng tháng (với lưu lượng startup thông thường)*: **~ 0 USD**.
 
 ### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
-
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
-
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+*Ma trận rủi ro & Chiến lược giảm thiểu*  
+- **Khởi động lạnh (Cold Starts) của Lambda**:  
+  - *Giải pháp*: Tối ưu gói code (giữ bộ nhớ Lambda nhỏ gọn), tải sẵn kết nối DynamoDB.  
+- **Quá tải Database (Throttling)**:  
+  - *Giải pháp*: Cài đặt Auto Scaling cho DynamoDB hoặc chuyển sang chế độ On-Demand nếu lưu lượng thực tế khó dự đoán.  
+- **Vượt ngân sách ngoài ý muốn**:  
+  - *Giải pháp*: Thiết lập CloudWatch Billing Alarms cảnh báo ngay khi chi phí > $10.
 
 ### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+Một hệ thống quản lý sự kiện chuyên nghiệp, toàn diện theo tiêu chuẩn doanh nghiệp (Enterprise-Grade Standard), chịu tải cao và sẵn sàng đưa vào vận hành (Production-ready). Hệ thống hỗ trợ tốt luồng công việc từ lúc tạo sự kiện, khách hàng đăng ký, đến điểm danh thực tế, mang lại trải nghiệm mượt mà và tối giản chi phí hạ tầng.

@@ -1,6 +1,6 @@
 ---
 title : "Prepare backend code"
-date : 2024-01-01 
+date: 2026-06-30
 weight : 2 
 chapter : false
 pre : " <b> 5.2. </b> "
@@ -13,7 +13,7 @@ In this step, you package the backend source code and upload it to Amazon S3. Cl
 #### 1. Build backend code locally
 
 1. Open Terminal or Command Prompt.
-2. Move to the backend folder:
+2. Move to the backend folder (Example):
 
 ```bash
 cd "C:\Users\Sieu chu nhiem\Desktop\aws-serverless-event-portal\backend"

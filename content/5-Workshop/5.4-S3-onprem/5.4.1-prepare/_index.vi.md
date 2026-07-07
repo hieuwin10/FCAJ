@@ -1,6 +1,6 @@
 ---
 title : "Cấu hình frontend ở local"
-date : 2024-01-01
+date: 2026-06-30
 weight : 1
 chapter : false
 pre : " <b> 5.4.1. </b> "
@@ -20,7 +20,7 @@ VITE_COGNITO_CLIENT_ID=abc123xyz456
 
 #### Build frontend
 
-Mở Terminal và di chuyển vào thư mục frontend:
+Mở Terminal và di chuyển vào thư mục frontend (Ví dụ):
 
 ```bash
 cd "C:\Users\Sieu chu nhiem\Desktop\aws-serverless-event-portal\frontend"
