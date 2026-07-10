@@ -25,6 +25,8 @@ Giải pháp tạo ra nền tảng chuyên nghiệp với 12 API endpoints có s
 ### 3. Kiến trúc giải pháp  
 Hệ thống vận hành theo cơ chế **Event-Driven Architecture**, chỉ kích hoạt tài nguyên khi có yêu cầu.
 
+![Architecture](/images/event_portal_architecture.jpg)
+
 *Dịch vụ AWS sử dụng chính*  
 - **Amazon S3 & CloudFront**: Lưu trữ và phân phối giao diện web tĩnh (Frontend).  
 - **Amazon Cognito**: Quản lý tài khoản, phân quyền User/Admin và cung cấp JWT Token.  

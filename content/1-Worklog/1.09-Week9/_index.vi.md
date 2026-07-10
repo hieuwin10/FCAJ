@@ -6,27 +6,17 @@ chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-
 ### Mục tiêu tuần 9:
+* Khởi tạo Frontend
+* Setup React/Vite, S3 Hosting, Protected Routes
 
-* Ghi chú cho nội dung thực hiện project nhóm.
-* Lên ý tưởng cho project.
+### Các công việc cần triển khai:
+| Thứ | Công việc |
+| --- | --- |
+| 2-3 | Tìm hiểu, phân tích và chuẩn bị tài liệu liên quan đến Khởi tạo Frontend. |
+| 4-5 | Thực hành: Setup React/Vite, S3 Hosting, Protected Routes. |
+| 6-7 | Kiểm tra, fix bug, và cập nhật báo cáo tiến độ tuần 9. |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --- | --- | --- | --- |
-| 2 | - Tìm kiếm ý tưởng cho project | 08/06/2026 | 08/06/2026 | |
-| 3 | - Tham khảo các dịch vụ AWS cho project | 09/06/2026 | 09/06/2026 | |
-| 4 | - Tham khảo các dịch vụ AWS cho project | 10/06/2026 | 10/06/2026 | |
-| 5 | - Viết tài liệu cho project | 11/06/2026 | 11/06/2026 | |
-| 6 | - Họp nhóm để triển khai project | 12/06/2026 | 12/06/2026 | |
-
-
-### Kết quả đạt được tuần 9:
-
-* Có ý tưởng cụ thể cho project nhóm.
-* Nắm được các dịch vụ AWS cần thiết.
-* Hoàn thiện tài liệu cho project.
-* Thống nhất kế hoạch triển khai với nhóm.
-
-
+### Kết quả đạt được:
+* Hoàn thành đúng tiến độ các hạng mục công việc của tuần 9 (Khởi tạo Frontend).
+* Tích lũy thêm kinh nghiệm xử lý các module trong hệ thống Event Portal.

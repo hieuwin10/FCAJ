@@ -6,25 +6,17 @@ chapter: false
 pre: " <b> 1.9. </b> "
 ---
 
-
 ### Week 9 Objectives:
+* Frontend Setup
+* Setup React/Vite, S3 Hosting, Protected Routes
 
-* Take notes on the group project implementation.
-* Brainstorm ideas for the project.
+### Tasks to be carried out:
+| Day | Task |
+| --- | --- |
+| 2-3 | Research, analyze, and prepare documentation regarding Frontend Setup. |
+| 4-5 | Practice/Implement: Setup React/Vite, S3 Hosting, Protected Routes. |
+| 6-7 | Test, fix bugs, and update the progress report for week 9. |
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | --- | --- | --- | --- |
-| 2 | - Search for project ideas | 08/06/2026 | 08/06/2026 | |
-| 3 | - Reference AWS services for the project | 09/06/2026 | 09/06/2026 | |
-| 4 | - Reference AWS services for the project | 10/06/2026 | 10/06/2026 | |
-| 5 | - Write documentation for the project | 11/06/2026 | 11/06/2026 | |
-| 6 | - Group meeting to implement the project | 12/06/2026 | 12/06/2026 | |
-
-
-### Week 9 Achievements:
-
-* Specific idea for the group project.
-* Identified necessary AWS services.
-* Completed project documentation.
-* Implementation plan agreed upon with the group.
+### Achievements:
+* Successfully completed tasks for week 9 (Frontend Setup) on schedule.
+* Gained hands-on experience dealing with the Event Portal system modules.

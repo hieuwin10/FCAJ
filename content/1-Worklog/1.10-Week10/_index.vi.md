@@ -6,24 +6,17 @@ chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
-
 ### Mục tiêu tuần 10:
+* Giao diện Waitlist & Profile
+* Xây dựng UI Waitlist, User Profile, List sự kiện
 
-* Ôn tập và hệ thống hóa lại toàn bộ kiến thức về các dịch vụ AWS đã học.
-* Củng cố kiến thức để chuẩn bị cho các bài thực hành và dự án tiếp theo.
+### Các công việc cần triển khai:
+| Thứ | Công việc |
+| --- | --- |
+| 2-3 | Tìm hiểu, phân tích và chuẩn bị tài liệu liên quan đến Giao diện Waitlist & Profile. |
+| 4-5 | Thực hành: Xây dựng UI Waitlist, User Profile, List sự kiện. |
+| 6-7 | Kiểm tra, fix bug, và cập nhật báo cáo tiến độ tuần 10. |
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
-| --- | --- | --- | --- | --- |
-| 2   | - Ôn tập về IAM, bảo mật tài khoản, Quản lý chi phí | 15/06/2026 | 15/06/2026 | |
-| 3   | - Ôn tập về Compute (EC2, AMI, EBS, ELB, Auto Scaling) | 16/06/2026 | 16/06/2026 | |
-| 4   | - Ôn tập về Networking (VPC, Subnet, Route Table, Security Group) | 17/06/2026 | 17/06/2026 | |
-| 5   | - Ôn tập về Storage (S3, EFS) và Database (RDS, DynamoDB) | 18/06/2026 | 18/06/2026 | |
-| 6   | - Làm bài kiểm tra ôn tập, đánh giá lại kiến thức tổng quan | 19/06/2026 | 19/06/2026 | |
-
-
-### Kết quả đạt được tuần 10:
-
-* Hệ thống hóa thành công các khái niệm và dịch vụ AWS cốt lõi (IAM, EC2, VPC, S3, RDS...).
-* Nắm vững cách kết nối, cấu hình và bảo mật các dịch vụ.
-* Tự tin áp dụng kiến thức vào thực tiễn và sẵn sàng cho các học phần nâng cao tiếp theo.
+### Kết quả đạt được:
+* Hoàn thành đúng tiến độ các hạng mục công việc của tuần 10 (Giao diện Waitlist & Profile).
+* Tích lũy thêm kinh nghiệm xử lý các module trong hệ thống Event Portal.

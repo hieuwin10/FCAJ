@@ -6,24 +6,17 @@ chapter: false
 pre: " <b> 1.10. </b> "
 ---
 
-
 ### Week 10 Objectives:
+* Waitlist & Profile UI
+* Build Waitlist UI, User Profile, Event List
 
-* Review and systematize all learned knowledge about AWS services.
-* Consolidate knowledge to prepare for upcoming labs and projects.
+### Tasks to be carried out:
+| Day | Task |
+| --- | --- |
+| 2-3 | Research, analyze, and prepare documentation regarding Waitlist & Profile UI. |
+| 4-5 | Practice/Implement: Build Waitlist UI, User Profile, Event List. |
+| 6-7 | Test, fix bugs, and update the progress report for week 10. |
 
-### Tasks to be carried out this week:
-| Day | Task | Start Date | Completion Date | Reference Material |
-| --- | --- | --- | --- | --- |
-| 2   | - Review IAM, Account Security, Cost Management | 06/15/2026 | 06/15/2026 | |
-| 3   | - Review Compute (EC2, AMI, EBS, ELB, Auto Scaling) | 06/16/2026 | 06/16/2026 | |
-| 4   | - Review Networking (VPC, Subnet, Route Table, Security Group) | 06/17/2026 | 06/17/2026 | |
-| 5   | - Review Storage (S3, EFS) and Database (RDS, DynamoDB) | 06/18/2026 | 06/18/2026 | |
-| 6   | - Take practice test, reassess overall knowledge | 06/19/2026 | 06/19/2026 | |
-
-
-### Week 10 Achievements:
-
-* Successfully systematized core AWS concepts and services (IAM, EC2, VPC, S3, RDS...).
-* Mastered how to connect, configure, and secure services.
-* Confident in applying knowledge to practice and ready for the next advanced modules.
+### Achievements:
+* Successfully completed tasks for week 10 (Waitlist & Profile UI) on schedule.
+* Gained hands-on experience dealing with the Event Portal system modules.

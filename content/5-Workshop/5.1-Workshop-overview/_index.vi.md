@@ -38,3 +38,5 @@ Với phương pháp này, quy trình triển khai được rút gọn như sau:
 #### Kiến trúc hoàn chỉnh
 
 Sau khi hoàn thành, hệ thống gồm frontend tĩnh được host trên S3, REST APIs thông qua API Gateway, backend logic chạy bằng Lambda, dữ liệu lưu trong DynamoDB và xác thực người dùng bằng Cognito.
+
+![Architecture](/images/event_portal_architecture.jpg)
